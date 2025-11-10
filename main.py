@@ -59,14 +59,14 @@ os.makedirs(DATA_DIR, exist_ok=True)
 SCALPER = {"runner": None}
 
 
-# ------------------------ Models ------------------------
 class OrderReq(BaseModel):
-    side: str = Field(..., regex="^(?i)(buy|sell)$")
+    side: str = Field(..., pattern="^(?i)(buy|sell)$")
     qty: int = Field(..., gt=0)
-    order_type: str = Field(..., regex="^(?i)(mkt|lmt)$")
+    order_type: str = Field(..., pattern="^(?i)(mkt|lmt)$")
     expiry: str = Field(..., pattern=r"^\d{6}$", description="YYYYMM (e.g., 202512 for Dec-2025)")
     limit_price: Optional[float] = None
-    tif: str = Field(default="GTC", regex="^(?i)(DAY|GTC|IOC|FOK)$")
+    tif: str = Field(default="GTC", pattern="^(?i)(DAY|GTC|IOC|FOK)$")
+
 
 
 # ------------------------ Health ------------------------

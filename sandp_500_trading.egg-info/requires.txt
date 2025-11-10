@@ -1,0 +1,13 @@
+fastapi==0.115.5
+uvicorn[standard]==0.32.0
+httpx==0.27.2
+pandas==2.2.3
+pyarrow==17.0.0
+python-dotenv==1.0.1
+ib-insync==0.9.86
+pytz==2024.2
+
+[dev]
+black>=24.8.0
+isort>=5.13.2
+mypy>=1.11.0

@@ -1,0 +1,6 @@
+pyproject.toml
+sandp_500_trading.egg-info/PKG-INFO
+sandp_500_trading.egg-info/SOURCES.txt
+sandp_500_trading.egg-info/dependency_links.txt
+sandp_500_trading.egg-info/requires.txt
+sandp_500_trading.egg-info/top_level.txt
