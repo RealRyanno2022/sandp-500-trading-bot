@@ -1,0 +1,43 @@
+[project]
+name = "sandp-500-trading"
+version = "0.1.0"
+description = "Intraday S&P 500 mini futures trading API (FastAPI + Tradovate + Massive.io)"
+authors = [{ name = "Your Name" }]
+requires-python = ">=3.10"
+
+# Core dependencies (these will auto-install via `uv sync`)
+dependencies = [
+    "fastapi==0.115.5",
+    "uvicorn[standard]==0.32.0",
+    "httpx==0.27.2",
+    "pandas==2.2.3",
+    "pyarrow==17.0.0",
+    "python-dotenv==1.0.1",
+    "ib-insync==0.9.86",
+    "pytz==2024.2"
+]
+
+[tool.uv]
+# This tells uv to create a .venv in the project root on sync
+managed = true
+venv = ".venv"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# --- Optional developer tooling ---
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.8.0",
+    "isort>=5.13.2",
+    "mypy>=1.11.0"
+]
